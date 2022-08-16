@@ -10,7 +10,6 @@
       v-model="searchFilter"
       :disabled="disabled"
       :placeholder="placeholder" />
-	  <div class="icon"/>
 
     <!-- Dropdown Menu -->
     <div class="dropdown-content"
@@ -23,6 +22,7 @@
           {{ option.name || option.id || '-' }}
       </div>
     </div>
+	<div class="icon"/>
   </div>
 </template>
 
@@ -131,10 +131,11 @@
   .dropdown {
     position: relative;
     display: block;
-	min-width: 250px;
+	min-width: 200px;
 	width: 100%;
 	}
   .dropdown-input {
+	box-sizing: border-box;
 	background: #fff;
 	cursor: pointer;
 	border: 1px solid #bdbdbd;
@@ -143,13 +144,13 @@
 	display: block;
 	font-size: 1em;
 	padding: 10px;
-	min-width: 250px;
 	width: 100%;
 	outline: none;
 	}
   .dropdown-content {
 	background-color: #fff;
 	min-width: 250px;
+	width: 100%;
 	max-height: 248px;
 	border: 1px solid #e7ecf5;
 	box-shadow: 0px -8px 34px 0px rgba(0,0,0,0.05);
@@ -161,12 +162,13 @@
 	line-height: 1rem;
 	padding: 8px;
 	text-decoration: none;
+	max-width: 450px;
 	cursor: pointer;
   }
 .dropdown-item:hover {
 background-color: #bae3ff
 }
-  .dropdown:hover .dropdowncontent {
+  .dropdown:hover .dropdown-content {
 	display: block;
   }
 .icon {
@@ -175,8 +177,8 @@ background-color: #bae3ff
   width: 25px;
   height: 25px;
   position: absolute;
-  top: 8px;
-  right:-10px;
+  top: 7px;
+  right:10px;
 
 }
 </style>

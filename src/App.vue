@@ -9,6 +9,7 @@
     :maxItem="10"
     placeholder="Search by CPN">
 </Dropdown>
+<button @click="printData"/>
 </div>
 </template>
 
@@ -18,12 +19,17 @@ export default {
   name: 'App',
   components: {
 	Dropdown
-  }
+  },
+methods: {
+		   printData() {
+		   console.log(this.selected)
+		   }
+		 }
 }
 </script>
 
 <style>
 .container {
-width: 5rem;
+width: 9rem;
 }
 </style>
