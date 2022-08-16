@@ -27,6 +27,8 @@
 </template>
 
 <script>
+  
+
   export default {
     name: 'Dropdown',
     template: 'Dropdown',
@@ -58,7 +60,7 @@
       maxItem: {
         type: Number,
         required: false,
-        default: 6,
+        default: 50,
         note: 'Max items showing'
       }
     },
@@ -128,10 +130,11 @@
 
 
 <style >
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
   .dropdown {
     position: relative;
     display: block;
-	min-width: 200px;
+	min-width: 300px;
 	width: 100%;
 	}
   .dropdown-input {
@@ -143,13 +146,14 @@
 	color: #333;
 	display: block;
 	font-size: 1em;
+	font-family: 'Roboto';
 	padding: 10px;
 	width: 100%;
 	outline: none;
 	}
   .dropdown-content {
 	background-color: #fff;
-	min-width: 250px;
+	min-width: 200px;
 	width: 100%;
 	max-height: 248px;
 	border: 1px solid #e7ecf5;
@@ -162,6 +166,7 @@
 	line-height: 1rem;
 	padding: 8px;
 	text-decoration: none;
+	font-family: 'Roboto';
 	max-width: 450px;
 	cursor: pointer;
   }
