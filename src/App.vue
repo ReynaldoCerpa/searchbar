@@ -1,26 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div class="container">
+<Dropdown
+    :options="[{ id: 1, name: 'Option 1'}, { id: 2, name: 'Option 2'}]"
+    v-on:selected=""
+    v-on:filter=""
+    :disabled="false"
+    name="zipcode"
+    :maxItem="10"
+    placeholder="Search by CPN">
+</Dropdown>
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Dropdown from "@/components/searchbar"
 export default {
   name: 'App',
   components: {
-    HelloWorld
+	Dropdown
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.container {
+width: 5rem;
 }
 </style>
